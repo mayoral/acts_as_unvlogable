@@ -22,7 +22,7 @@ class VgMarca
   end
   
   def embed_url
-    "http://www.marca.com/componentes/flash/embed.swf?ba=0&cvol=1&bt=1&lg=1&vID=#{@video_id}&ba=1"
+    "http://estaticos.marca.com/multimedia/reproductores/newPlayer.swf?ba=0&cvol=1&bt=1&lg=1&vID=#{@video_id}&ba=1"
   end
 
   def embed_html(width=425, height=344, options={})
