@@ -233,6 +233,22 @@ class Flickr
       collection = [collection] if collection.is_a? Hash
       collection.each { |photo| self << Photo.new(photo.delete('id'), api_key, photo) }
     end
+
+    def total_pages
+      pages.to_i
+    end
+
+    def current_page
+      page.to_i
+    end
+
+    def previous_page
+      current_page - 1
+    end
+
+    def next_page
+      current_page + 1
+    end
   end
   
   # Todo:
